@@ -1,0 +1,6 @@
+framework module Pods_HoumanJivarUITests {
+  umbrella header "Pods-HoumanJivarUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
