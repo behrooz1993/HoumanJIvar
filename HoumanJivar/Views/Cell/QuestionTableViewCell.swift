@@ -55,7 +55,7 @@ class QuestionTableViewCell: UITableViewCell {
             make.top.equalTo(self.questionLable).offset(30)
             make.left.equalTo(self.contentView).offset(20)
             make.right.equalTo(self.contentView).offset(-20)
-            make.height.equalTo(150)
+            make.height.equalTo(250)
         }
         
         self.firstAnswerLabel = UILabel()
@@ -73,7 +73,7 @@ class QuestionTableViewCell: UITableViewCell {
         firstFlowLayout.scrollDirection = .horizontal
         firstFlowLayout.minimumLineSpacing = 10
         firstFlowLayout.minimumInteritemSpacing = 10
-        firstFlowLayout.itemSize = CGSize(width: 130, height: 150)
+        firstFlowLayout.itemSize = CGSize(width: UIScreen.main.bounds.width - 40, height: 200)
         self.firstCollectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: firstFlowLayout)
         self.firstCollectionView.register(MultiMediaCollectionViewCell.self, forCellWithReuseIdentifier: AppConstants.MULTIMEDIA_CELL)
         self.firstCollectionView.transform = CGAffineTransform(scaleX: -1, y: 1)
@@ -89,11 +89,11 @@ class QuestionTableViewCell: UITableViewCell {
         self.secondAnswerView = UIView()
         self.contentView.addSubview(self.secondAnswerView)
         self.secondAnswerView.snp.makeConstraints { (make) in
-            make.top.equalTo(self.firstAnswerView).offset(160)
+            make.top.equalTo(self.firstAnswerView).offset(260)
             make.left.equalTo(self.contentView).offset(20)
             make.right.equalTo(self.contentView).offset(-20)
             make.bottom.equalTo(self.contentView).offset(-20)
-            make.height.equalTo(150)
+            make.height.equalTo(250)
         }
         
         self.secondAnswerLabel = UILabel()
@@ -111,7 +111,7 @@ class QuestionTableViewCell: UITableViewCell {
         secondFlowLayout.scrollDirection = .horizontal
         secondFlowLayout.minimumLineSpacing = 10
         secondFlowLayout.minimumInteritemSpacing = 10
-        secondFlowLayout.itemSize = CGSize(width: 130, height: 150)
+        secondFlowLayout.itemSize = CGSize(width: UIScreen.main.bounds.width - 40, height: 200)
         self.secondCollectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: secondFlowLayout)
         self.secondCollectionView.register(MultiMediaCollectionViewCell.self, forCellWithReuseIdentifier: AppConstants.MULTIMEDIA_CELL)
         self.secondCollectionView.transform = CGAffineTransform(scaleX: -1, y: 1)

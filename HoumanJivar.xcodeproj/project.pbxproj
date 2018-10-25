@@ -33,6 +33,7 @@
 		AF42A52721807B3A00C58C8A /* HoumanJivarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF42A52621807B3A00C58C8A /* HoumanJivarUITests.swift */; };
 		AF7D320F2181F8C500716B78 /* MultiMediaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7D320E2181F8C500716B78 /* MultiMediaCollectionViewCell.swift */; };
 		AF7D32112181FAC400716B78 /* MultiMediaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7D32102181FAC400716B78 /* MultiMediaViewModel.swift */; };
+		AF7D3214218224EA00716B78 /* PlayerViewClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7D3213218224EA00716B78 /* PlayerViewClass.swift */; };
 		AFB01E362181CF7D0094EAA4 /* FontProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB01E352181CF7D0094EAA4 /* FontProvider.swift */; };
 		AFB01E382181D7470094EAA4 /* QuestionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB01E372181D7470094EAA4 /* QuestionData.swift */; };
 		AFB01E3B2181D89C0094EAA4 /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB01E3A2181D89C0094EAA4 /* Feedback.swift */; };
@@ -99,6 +100,7 @@
 		AF42A52821807B3A00C58C8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF7D320E2181F8C500716B78 /* MultiMediaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiMediaCollectionViewCell.swift; sourceTree = "<group>"; };
 		AF7D32102181FAC400716B78 /* MultiMediaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiMediaViewModel.swift; sourceTree = "<group>"; };
+		AF7D3213218224EA00716B78 /* PlayerViewClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewClass.swift; sourceTree = "<group>"; };
 		AFB01E342181CEF20094EAA4 /* IRANSansMobile.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMobile.ttf; sourceTree = "<group>"; };
 		AFB01E352181CF7D0094EAA4 /* FontProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontProvider.swift; sourceTree = "<group>"; };
 		AFB01E372181D7470094EAA4 /* QuestionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionData.swift; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 		AF2DE9B2218096E000FED525 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AF7D3212218224D700716B78 /* CustomView */,
 				AF2DE9B3218096E400FED525 /* Cell */,
 			);
 			path = Views;
@@ -328,6 +331,14 @@
 				AF42A52821807B3A00C58C8A /* Info.plist */,
 			);
 			path = HoumanJivarUITests;
+			sourceTree = "<group>";
+		};
+		AF7D3212218224D700716B78 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				AF7D3213218224EA00716B78 /* PlayerViewClass.swift */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 		AFB01E322181CEDB0094EAA4 /* Resources */ = {
@@ -654,6 +665,7 @@
 			files = (
 				AF2DE99521807D3C00FED525 /* AppCoordinator.swift in Sources */,
 				AF2DE9B5218096F600FED525 /* QuestionTableViewCell.swift in Sources */,
+				AF7D3214218224EA00716B78 /* PlayerViewClass.swift in Sources */,
 				AF2DE9AD21807F4600FED525 /* ApiConstants.swift in Sources */,
 				AF2DE9B92180990900FED525 /* Question.swift in Sources */,
 				AF2DE9A121807E1400FED525 /* SplashCoordinator.swift in Sources */,
@@ -853,9 +865,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2B6E9L7R7E;
 				INFOPLIST_FILE = HoumanJivar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.HoumanJivar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -869,9 +885,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2B6E9L7R7E;
 				INFOPLIST_FILE = HoumanJivar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.HoumanJivar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -887,7 +907,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HoumanJivarTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.HoumanJivarTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -904,7 +928,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HoumanJivarTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.HoumanJivarTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -920,7 +948,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HoumanJivarUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.HoumanJivarUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -936,7 +968,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HoumanJivarUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.HoumanJivarUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
