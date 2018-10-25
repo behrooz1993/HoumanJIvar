@@ -9,6 +9,7 @@ target 'HoumanJivar' do
   pod 'Moya', '~> 11.0'  
   pod 'Moya-ObjectMapper'  
   pod 'SnapKit', '~> 4.0.0'
+  pod 'Kingfisher', '~> 4.0' 
 
   # Pods for HoumanJivar
 

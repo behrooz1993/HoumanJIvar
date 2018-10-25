@@ -52,6 +52,7 @@ extension HomeViewController {
                 let indexPath = IndexPath(row: index, section: 0)
                 let cell = tableView.dequeueReusableCell(withIdentifier: AppConstants.QUESTION_CELL, for: indexPath) as! QuestionTableViewCell
                 cell.viewModel = item
+                cell.selectionStyle = .none
                 return cell
             }
             .disposed(by: disposeBag)

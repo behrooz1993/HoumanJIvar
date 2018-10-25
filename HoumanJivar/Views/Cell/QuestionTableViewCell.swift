@@ -50,13 +50,12 @@ class QuestionTableViewCell: UITableViewCell {
         }
         
         self.firstAnswerView = UIView()
-        self.firstAnswerView.backgroundColor = .red
         self.contentView.addSubview(self.firstAnswerView)
         self.firstAnswerView.snp.makeConstraints { (make) in
             make.top.equalTo(self.questionLable).offset(30)
             make.left.equalTo(self.contentView).offset(20)
             make.right.equalTo(self.contentView).offset(-20)
-            make.height.equalTo(100)
+            make.height.equalTo(150)
         }
         
         self.firstAnswerLabel = UILabel()
@@ -72,25 +71,29 @@ class QuestionTableViewCell: UITableViewCell {
         
         let firstFlowLayout = UICollectionViewFlowLayout()
         firstFlowLayout.scrollDirection = .horizontal
+        firstFlowLayout.minimumLineSpacing = 10
+        firstFlowLayout.minimumInteritemSpacing = 10
+        firstFlowLayout.itemSize = CGSize(width: 130, height: 150)
         self.firstCollectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: firstFlowLayout)
+        self.firstCollectionView.register(MultiMediaCollectionViewCell.self, forCellWithReuseIdentifier: AppConstants.MULTIMEDIA_CELL)
         self.firstCollectionView.transform = CGAffineTransform(scaleX: -1, y: 1)
+        self.firstCollectionView.backgroundColor = UIColor.clear
         self.firstAnswerView.addSubview(self.firstCollectionView)
         self.firstCollectionView.snp.makeConstraints { (make) in
-            make.top.equalTo(self.firstAnswerLabel).offset(20)
+            make.top.equalTo(self.firstAnswerLabel).offset(8)
             make.left.equalTo(self.firstAnswerView).offset(8)
             make.right.equalTo(self.firstAnswerView).offset(-8)
             make.bottom.equalTo(self.firstAnswerView).offset(-8)
         }
         
         self.secondAnswerView = UIView()
-        self.secondAnswerView.backgroundColor = .blue
         self.contentView.addSubview(self.secondAnswerView)
         self.secondAnswerView.snp.makeConstraints { (make) in
-            make.top.equalTo(self.firstAnswerView).offset(110)
+            make.top.equalTo(self.firstAnswerView).offset(160)
             make.left.equalTo(self.contentView).offset(20)
             make.right.equalTo(self.contentView).offset(-20)
             make.bottom.equalTo(self.contentView).offset(-20)
-            make.height.equalTo(100)
+            make.height.equalTo(150)
         }
         
         self.secondAnswerLabel = UILabel()
@@ -106,8 +109,13 @@ class QuestionTableViewCell: UITableViewCell {
         
         let secondFlowLayout = UICollectionViewFlowLayout()
         secondFlowLayout.scrollDirection = .horizontal
+        secondFlowLayout.minimumLineSpacing = 10
+        secondFlowLayout.minimumInteritemSpacing = 10
+        secondFlowLayout.itemSize = CGSize(width: 130, height: 150)
         self.secondCollectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: secondFlowLayout)
+        self.secondCollectionView.register(MultiMediaCollectionViewCell.self, forCellWithReuseIdentifier: AppConstants.MULTIMEDIA_CELL)
         self.secondCollectionView.transform = CGAffineTransform(scaleX: -1, y: 1)
+        self.secondCollectionView.backgroundColor = UIColor.clear
         self.secondAnswerView.addSubview(self.secondCollectionView)
         self.secondCollectionView.snp.makeConstraints { (make) in
             make.top.equalTo(self.secondAnswerLabel).offset(20)
@@ -122,6 +130,24 @@ class QuestionTableViewCell: UITableViewCell {
         viewModel.questionText.bind(to: self.questionLable.rx.text).disposed(by: self.disposeBag)
         viewModel.firstAnswerText.bind(to: self.firstAnswerLabel.rx.text).disposed(by: self.disposeBag)
         viewModel.secondAnswerText.bind(to: self.secondAnswerLabel.rx.text).disposed(by: self.disposeBag)
+        viewModel.firstMultimedia
+            .bind(to: self.firstCollectionView.rx.items) { collectionView, index, item in
+                let indexPath = IndexPath(row: index, section: 0)
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AppConstants.MULTIMEDIA_CELL, for: indexPath) as! MultiMediaCollectionViewCell
+                cell.loadUrl(url: item.0.link)
+                cell.transform = CGAffineTransform(scaleX: -1, y: 1)
+                return cell
+            }
+            .disposed(by: disposeBag)
+        viewModel.secondMultimedia
+            .bind(to: self.secondCollectionView.rx.items) { collectionView, index, item in
+                let indexPath = IndexPath(row: index, section: 0)
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AppConstants.MULTIMEDIA_CELL, for: indexPath) as! MultiMediaCollectionViewCell
+                cell.loadUrl(url: item.0.link)
+                cell.transform = CGAffineTransform(scaleX: -1, y: 1)
+                return cell
+            }
+            .disposed(by: disposeBag)
     }
 
 }

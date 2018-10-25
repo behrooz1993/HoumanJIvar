@@ -31,6 +31,8 @@
 		AF42A51121807B3A00C58C8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF42A50F21807B3A00C58C8A /* LaunchScreen.storyboard */; };
 		AF42A51C21807B3A00C58C8A /* HoumanJivarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF42A51B21807B3A00C58C8A /* HoumanJivarTests.swift */; };
 		AF42A52721807B3A00C58C8A /* HoumanJivarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF42A52621807B3A00C58C8A /* HoumanJivarUITests.swift */; };
+		AF7D320F2181F8C500716B78 /* MultiMediaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7D320E2181F8C500716B78 /* MultiMediaCollectionViewCell.swift */; };
+		AF7D32112181FAC400716B78 /* MultiMediaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7D32102181FAC400716B78 /* MultiMediaViewModel.swift */; };
 		AFB01E362181CF7D0094EAA4 /* FontProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB01E352181CF7D0094EAA4 /* FontProvider.swift */; };
 		AFB01E382181D7470094EAA4 /* QuestionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB01E372181D7470094EAA4 /* QuestionData.swift */; };
 		AFB01E3B2181D89C0094EAA4 /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB01E3A2181D89C0094EAA4 /* Feedback.swift */; };
@@ -95,6 +97,8 @@
 		AF42A52221807B3A00C58C8A /* HoumanJivarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoumanJivarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF42A52621807B3A00C58C8A /* HoumanJivarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoumanJivarUITests.swift; sourceTree = "<group>"; };
 		AF42A52821807B3A00C58C8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF7D320E2181F8C500716B78 /* MultiMediaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiMediaCollectionViewCell.swift; sourceTree = "<group>"; };
+		AF7D32102181FAC400716B78 /* MultiMediaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiMediaViewModel.swift; sourceTree = "<group>"; };
 		AFB01E342181CEF20094EAA4 /* IRANSansMobile.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMobile.ttf; sourceTree = "<group>"; };
 		AFB01E352181CF7D0094EAA4 /* FontProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontProvider.swift; sourceTree = "<group>"; };
 		AFB01E372181D7470094EAA4 /* QuestionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionData.swift; sourceTree = "<group>"; };
@@ -230,6 +234,7 @@
 				AF2DE9A421807E9900FED525 /* HomeViewModel.swift */,
 				AF2DE9A621807EA200FED525 /* HomeCoordinator.swift */,
 				AF2DE9B02180889800FED525 /* QuestionViewModel.swift */,
+				AF7D32102181FAC400716B78 /* MultiMediaViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -261,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				AF2DE9B4218096F600FED525 /* QuestionTableViewCell.swift */,
+				AF7D320E2181F8C500716B78 /* MultiMediaCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -565,6 +571,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HoumanJivar/Pods-HoumanJivar-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya-ObjectMapper/Moya_ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
@@ -576,6 +583,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
@@ -657,12 +665,14 @@
 				AF2DE9A521807E9900FED525 /* HomeViewModel.swift in Sources */,
 				AF42A50921807B3A00C58C8A /* ViewController.swift in Sources */,
 				AF2DE99F21807E0C00FED525 /* SplashViewModel.swift in Sources */,
+				AF7D320F2181F8C500716B78 /* MultiMediaCollectionViewCell.swift in Sources */,
 				AF2DE9B12180889800FED525 /* QuestionViewModel.swift in Sources */,
 				AF2DE9AB21807F1C00FED525 /* TestApi.swift in Sources */,
 				AFB01E3D2181D8E90094EAA4 /* MultiMedia.swift in Sources */,
 				AF2DE9B7218097E200FED525 /* AppConstants.swift in Sources */,
 				AF2DE9A321807E9100FED525 /* HomeViewController.swift in Sources */,
 				AFB01E432181D9910094EAA4 /* AnswerFeedbackLogic.swift in Sources */,
+				AF7D32112181FAC400716B78 /* MultiMediaViewModel.swift in Sources */,
 				AF2DE99D21807DF100FED525 /* SplashViewController.swift in Sources */,
 				AF42A50721807B3A00C58C8A /* AppDelegate.swift in Sources */,
 				AFB01E362181CF7D0094EAA4 /* FontProvider.swift in Sources */,
@@ -845,10 +855,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HoumanJivar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.HoumanJivar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -864,10 +871,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HoumanJivar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.HoumanJivar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -883,11 +887,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HoumanJivarTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.HoumanJivarTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -904,11 +904,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HoumanJivarTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.HoumanJivarTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -924,11 +920,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HoumanJivarUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.HoumanJivarUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -944,11 +936,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HoumanJivarUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.HoumanJivarUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

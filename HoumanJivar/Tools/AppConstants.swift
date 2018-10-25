@@ -11,5 +11,6 @@ import Foundation
 class AppConstants {
     
     static let QUESTION_CELL = "QuestionCell"
+    static let MULTIMEDIA_CELL = "MultiMediaCell"
     
 }
