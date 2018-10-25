@@ -17,12 +17,12 @@ class HomeViewModel {
     var testProvider:MoyaProvider<TestApi>!
     
     // MARK: Inputs
-    var items = BehaviorRelay<[(Item,ItemViewModel)]>(value: [])
+    var questions = BehaviorRelay<[(Question,QuestionViewModel)]>(value: [])
     let alert: AnyObserver<String>
     
     // MARK: Outputs
     let alertMessage: Observable<String>
-    lazy var itemsData: Observable<[ItemViewModel]> = self.items.asObservable().map({ $0.map{ $0.1} })
+    lazy var questionsData: Observable<[QuestionViewModel]> = self.questions.asObservable().map({ $0.map{ $0.1} })
     
     init(testProvider:MoyaProvider<TestApi>) {
         self.testProvider = testProvider
@@ -37,8 +37,9 @@ class HomeViewModel {
             switch result {
             case let .success(response):
                 do {
-                    let _items = try response.mapArray(Item.self)
-                    self.items.accept(_items.map { ($0, ItemViewModel(item: $0)) })
+                    let item = try response.mapObject(Item.self)
+                    let _questions = item.questions
+                    self.questions.accept(_questions.map { ($0, QuestionViewModel(question: $0)) })
                 } catch {
                 }
             case let .failure(error):

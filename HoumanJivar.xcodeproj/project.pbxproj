@@ -20,7 +20,10 @@
 		AF2DE9AB21807F1C00FED525 /* TestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2DE9AA21807F1C00FED525 /* TestApi.swift */; };
 		AF2DE9AD21807F4600FED525 /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2DE9AC21807F4600FED525 /* ApiConstants.swift */; };
 		AF2DE9AF2180834600FED525 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2DE9AE2180834600FED525 /* Item.swift */; };
-		AF2DE9B12180889800FED525 /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2DE9B02180889800FED525 /* ItemViewModel.swift */; };
+		AF2DE9B12180889800FED525 /* QuestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2DE9B02180889800FED525 /* QuestionViewModel.swift */; };
+		AF2DE9B5218096F600FED525 /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2DE9B4218096F600FED525 /* QuestionTableViewCell.swift */; };
+		AF2DE9B7218097E200FED525 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2DE9B6218097E200FED525 /* AppConstants.swift */; };
+		AF2DE9B92180990900FED525 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2DE9B82180990900FED525 /* Question.swift */; };
 		AF42A50721807B3A00C58C8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF42A50621807B3A00C58C8A /* AppDelegate.swift */; };
 		AF42A50921807B3A00C58C8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF42A50821807B3A00C58C8A /* ViewController.swift */; };
 		AF42A50C21807B3A00C58C8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF42A50A21807B3A00C58C8A /* Main.storyboard */; };
@@ -28,6 +31,13 @@
 		AF42A51121807B3A00C58C8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF42A50F21807B3A00C58C8A /* LaunchScreen.storyboard */; };
 		AF42A51C21807B3A00C58C8A /* HoumanJivarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF42A51B21807B3A00C58C8A /* HoumanJivarTests.swift */; };
 		AF42A52721807B3A00C58C8A /* HoumanJivarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF42A52621807B3A00C58C8A /* HoumanJivarUITests.swift */; };
+		AFB01E362181CF7D0094EAA4 /* FontProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB01E352181CF7D0094EAA4 /* FontProvider.swift */; };
+		AFB01E382181D7470094EAA4 /* QuestionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB01E372181D7470094EAA4 /* QuestionData.swift */; };
+		AFB01E3B2181D89C0094EAA4 /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB01E3A2181D89C0094EAA4 /* Feedback.swift */; };
+		AFB01E3D2181D8E90094EAA4 /* MultiMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB01E3C2181D8E90094EAA4 /* MultiMedia.swift */; };
+		AFB01E3F2181D92A0094EAA4 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB01E3E2181D92A0094EAA4 /* Answer.swift */; };
+		AFB01E412181D9510094EAA4 /* Branching.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB01E402181D9510094EAA4 /* Branching.swift */; };
+		AFB01E432181D9910094EAA4 /* AnswerFeedbackLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB01E422181D9910094EAA4 /* AnswerFeedbackLogic.swift */; };
 		F245CBC725903C11E9A4945D /* Pods_HoumanJivar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 832160684C953BA68E1DF50C /* Pods_HoumanJivar.framework */; };
 		F6EB9B34FB045E86251AEA4D /* Pods_HoumanJivarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF18B45726B60DBF44E1031 /* Pods_HoumanJivarTests.framework */; };
 /* End PBXBuildFile section */
@@ -68,7 +78,10 @@
 		AF2DE9AA21807F1C00FED525 /* TestApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApi.swift; sourceTree = "<group>"; };
 		AF2DE9AC21807F4600FED525 /* ApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
 		AF2DE9AE2180834600FED525 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		AF2DE9B02180889800FED525 /* ItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
+		AF2DE9B02180889800FED525 /* QuestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewModel.swift; sourceTree = "<group>"; };
+		AF2DE9B4218096F600FED525 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
+		AF2DE9B6218097E200FED525 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		AF2DE9B82180990900FED525 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		AF42A50321807B3A00C58C8A /* HoumanJivar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoumanJivar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF42A50621807B3A00C58C8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF42A50821807B3A00C58C8A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +95,14 @@
 		AF42A52221807B3A00C58C8A /* HoumanJivarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoumanJivarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF42A52621807B3A00C58C8A /* HoumanJivarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoumanJivarUITests.swift; sourceTree = "<group>"; };
 		AF42A52821807B3A00C58C8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFB01E342181CEF20094EAA4 /* IRANSansMobile.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMobile.ttf; sourceTree = "<group>"; };
+		AFB01E352181CF7D0094EAA4 /* FontProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontProvider.swift; sourceTree = "<group>"; };
+		AFB01E372181D7470094EAA4 /* QuestionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionData.swift; sourceTree = "<group>"; };
+		AFB01E3A2181D89C0094EAA4 /* Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
+		AFB01E3C2181D8E90094EAA4 /* MultiMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiMedia.swift; sourceTree = "<group>"; };
+		AFB01E3E2181D92A0094EAA4 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		AFB01E402181D9510094EAA4 /* Branching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Branching.swift; sourceTree = "<group>"; };
+		AFB01E422181D9910094EAA4 /* AnswerFeedbackLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerFeedbackLogic.swift; sourceTree = "<group>"; };
 		C93779F967848CE75C038059 /* Pods_HoumanJivarUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HoumanJivarUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBE6BDF796DFBB87ABDC0F9A /* Pods-HoumanJivar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoumanJivar.release.xcconfig"; path = "Pods/Target Support Files/Pods-HoumanJivar/Pods-HoumanJivar.release.xcconfig"; sourceTree = "<group>"; };
 		E5EEDE88B2187210C482F830 /* Pods-HoumanJivarUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoumanJivarUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HoumanJivarUITests/Pods-HoumanJivarUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -153,6 +174,8 @@
 				AF2DE99621807D5D00FED525 /* BaseCoordinator.swift */,
 				AF2DE99821807D9B00FED525 /* StoryboardInitializable.swift */,
 				AF2DE9AC21807F4600FED525 /* ApiConstants.swift */,
+				AF2DE9B6218097E200FED525 /* AppConstants.swift */,
+				AFB01E352181CF7D0094EAA4 /* FontProvider.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -170,6 +193,13 @@
 			isa = PBXGroup;
 			children = (
 				AF2DE9AE2180834600FED525 /* Item.swift */,
+				AF2DE9B82180990900FED525 /* Question.swift */,
+				AFB01E372181D7470094EAA4 /* QuestionData.swift */,
+				AFB01E3A2181D89C0094EAA4 /* Feedback.swift */,
+				AFB01E3C2181D8E90094EAA4 /* MultiMedia.swift */,
+				AFB01E3E2181D92A0094EAA4 /* Answer.swift */,
+				AFB01E402181D9510094EAA4 /* Branching.swift */,
+				AFB01E422181D9910094EAA4 /* AnswerFeedbackLogic.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -199,7 +229,7 @@
 				AF2DE9A221807E9100FED525 /* HomeViewController.swift */,
 				AF2DE9A421807E9900FED525 /* HomeViewModel.swift */,
 				AF2DE9A621807EA200FED525 /* HomeCoordinator.swift */,
-				AF2DE9B02180889800FED525 /* ItemViewModel.swift */,
+				AF2DE9B02180889800FED525 /* QuestionViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -217,6 +247,22 @@
 				AF2DE9AA21807F1C00FED525 /* TestApi.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		AF2DE9B2218096E000FED525 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AF2DE9B3218096E400FED525 /* Cell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AF2DE9B3218096E400FED525 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AF2DE9B4218096F600FED525 /* QuestionTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		AF42A4FA21807B3900C58C8A = {
@@ -244,6 +290,8 @@
 		AF42A50521807B3A00C58C8A /* HoumanJivar */ = {
 			isa = PBXGroup;
 			children = (
+				AFB01E322181CEDB0094EAA4 /* Resources */,
+				AF2DE9B2218096E000FED525 /* Views */,
 				AF2DE99321807D2400FED525 /* Networking */,
 				AF2DE99221807D1E00FED525 /* Models */,
 				AF2DE99121807D1800FED525 /* Scenes */,
@@ -274,6 +322,22 @@
 				AF42A52821807B3A00C58C8A /* Info.plist */,
 			);
 			path = HoumanJivarUITests;
+			sourceTree = "<group>";
+		};
+		AFB01E322181CEDB0094EAA4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AFB01E332181CEE10094EAA4 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AFB01E332181CEE10094EAA4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AFB01E342181CEF20094EAA4 /* IRANSansMobile.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -581,19 +645,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF2DE99521807D3C00FED525 /* AppCoordinator.swift in Sources */,
+				AF2DE9B5218096F600FED525 /* QuestionTableViewCell.swift in Sources */,
 				AF2DE9AD21807F4600FED525 /* ApiConstants.swift in Sources */,
+				AF2DE9B92180990900FED525 /* Question.swift in Sources */,
 				AF2DE9A121807E1400FED525 /* SplashCoordinator.swift in Sources */,
+				AFB01E3B2181D89C0094EAA4 /* Feedback.swift in Sources */,
 				AF2DE99921807D9B00FED525 /* StoryboardInitializable.swift in Sources */,
 				AF2DE9AF2180834600FED525 /* Item.swift in Sources */,
+				AFB01E382181D7470094EAA4 /* QuestionData.swift in Sources */,
+				AFB01E3F2181D92A0094EAA4 /* Answer.swift in Sources */,
 				AF2DE9A521807E9900FED525 /* HomeViewModel.swift in Sources */,
 				AF42A50921807B3A00C58C8A /* ViewController.swift in Sources */,
 				AF2DE99F21807E0C00FED525 /* SplashViewModel.swift in Sources */,
-				AF2DE9B12180889800FED525 /* ItemViewModel.swift in Sources */,
+				AF2DE9B12180889800FED525 /* QuestionViewModel.swift in Sources */,
 				AF2DE9AB21807F1C00FED525 /* TestApi.swift in Sources */,
+				AFB01E3D2181D8E90094EAA4 /* MultiMedia.swift in Sources */,
+				AF2DE9B7218097E200FED525 /* AppConstants.swift in Sources */,
 				AF2DE9A321807E9100FED525 /* HomeViewController.swift in Sources */,
+				AFB01E432181D9910094EAA4 /* AnswerFeedbackLogic.swift in Sources */,
 				AF2DE99D21807DF100FED525 /* SplashViewController.swift in Sources */,
 				AF42A50721807B3A00C58C8A /* AppDelegate.swift in Sources */,
+				AFB01E362181CF7D0094EAA4 /* FontProvider.swift in Sources */,
 				AF2DE99721807D5D00FED525 /* BaseCoordinator.swift in Sources */,
+				AFB01E412181D9510094EAA4 /* Branching.swift in Sources */,
 				AF2DE9A721807EA200FED525 /* HomeCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

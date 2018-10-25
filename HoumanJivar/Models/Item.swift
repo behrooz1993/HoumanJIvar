@@ -10,16 +10,17 @@ import Foundation
 import ObjectMapper
 
 class Item: Mappable {
-    var questionId:Int?
-    var questionPubId:Int?
-    var surveyId:Int?
-    var questionNumber:Int?
-    var questionType:String?
-    var question:String?
+    var code:Int?
+    var message:String?
+    var questions = [Question]()
     
     required init?(map: Map) {
     }
     
     func mapping(map: Map) {
-     }
+        code <- map["Code"]
+        message <- map["Message"]
+        questions <- map["Result"]
+    }
+    
 }

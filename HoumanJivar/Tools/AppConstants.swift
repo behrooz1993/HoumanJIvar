@@ -1,5 +1,5 @@
 //
-//  ItemViewModel.swift
+//  File.swift
 //  HoumanJivar
 //
 //  Created by Behrooz Payoon on 10/24/18.
@@ -8,9 +8,8 @@
 
 import Foundation
 
-class ItemViewModel {
-
-    init(item:Item) {
-    }
+class AppConstants {
+    
+    static let QUESTION_CELL = "QuestionCell"
     
 }
